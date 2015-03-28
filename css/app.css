@@ -15,4 +15,12 @@ ul {
   .contactNumber input {
     display: inline; }
 
+code p {
+  padding: 0px;
+  margin: 0px; }
+
+.notesFrame {
+  overflow: scroll;
+  height: auto; }
+
 /*# sourceMappingURL=app.css.map */

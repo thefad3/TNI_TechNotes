@@ -1,9 +1,10 @@
 
 <h3>No DSL Sync</h3>
-
-<div ng-controller="notesController">
+<hr width="100%">
+<div ng-controller="notesController" >
     <div class="row">
         <div class="col-md-6">
+            <blockquote>
     <div class="form-group contactNumber">
         <label for="">Billing Telephone Number (BTN):</label><br>
         <input type="number" maxlength="3" class="form-control phone" ng-model="user.btn"  />
@@ -57,26 +58,138 @@
         <label for="">Internet Light:</label>
         <input type="text" ng-model="user.light" class="form-control input-sm" />
     </div>
+    <hr width="100%">
+    <!-- This is after the Caller Info -->
+    <h4>Procedure Notes:</h4>
+    <hr width="100%">
+    <div class="form-group">
+        <label for="">LOOPCARE VER CODE:</label>
+        <input type="text" ng-model="user.light" class="form-control input-sm" />
+    </div>
+    
+    <div class="form-group">
+        <label for="">RADIUS USAGE Disconnects in INET:</label>
+        <input type="text" ng-model="user.light" class="form-control input-sm" />
+    </div>
+    
+    <div class="form-group">
+        <label for="">LOOPCARE Disconnects:</label>
+        <input type="text" ng-model="user.light" class="form-control input-sm" />
+    </div>
+    
+    <div class="form-group">
+        <label for="">Checked Failed RADIUS Logins:</label>
+        <input type="text" ng-model="user.light" class="form-control input-sm" />
+    </div>
     
     
+    <div class="form-group">
+        <label for="">Home phone has Active Dial tone:</label>
+        <select class="form-control input-sm" ng-model="user.aohd">
+          <option></option>
+          <option>No, there is no dial tone</option>
+          <option>Yes, Dial tone is Active</option>
+         </select>
+    </div>
     
+    <div class="form-group">
+        <label for="">Verified and Reseated Filters:</label>
+        <select class="form-control input-sm" ng-model="user.aohd">
+          <option>Verified and Reseated Filters, no change.</option>
+          <option>Reseated Filters, issue resolved.</option>
+          <option>Filters are bad, filter request filled out.</option>
+         </select>
+    </div>
     
+    <div class="form-group">
+        <label for="">Any Static on Phone Line:</label>
+       <select class="form-control input-sm" ng-model="user.aohd">
+          <option></option>
+          <option>Yes, there is static on Phone Line</option>
+          <option>No, there is not any static on line</option>
+         </select>    
+         </div>
+    
+    <div class="form-group">
+        <label for="">Reseated Phone Line:</label>
+        <select class="form-control input-sm" ng-model="user.aohd">
+          <option></option>
+          <option>Reseated phone line securly, no change</option>
+          <option>Reseated and Issue has been resolved</option>
+        </select>
+    </div>
+    
+    <div class="form-group">
+        <label for="">Phone Cord Less then 10 Feet:</label>
+        <select class="form-control input-sm" ng-model="user.aohd">
+          <option></option>
+          <option>Phone Cord is less then 10 Feet Long</option>
+          <option>Phone Cord is more then 10 Feet Long</option>
+        </select>
+    </div>
+    
+    <div class="form-group">
+        <label for="">Lights on Modem 1 Minte after Powercycle:</label>
+        <p></p>
+          <label>
+              Power: <input type="checkbox" id="blankCheckbox" value="option1">
+          </label>
+          <br>
+          <label>
+              E1: <input type="checkbox" id="blankCheckbox" value="option1">
+          </label>
+          
+          <label>
+              E2: <input type="checkbox" id="blankCheckbox" value="option1">
+          </label>
+          
+          <label>
+              E3: <input type="checkbox" id="blankCheckbox" value="option1">
+          </label>
+          
+            <label>
+              E4: <input type="checkbox" id="blankCheckbox" value="option1">
+          </label>
+          <br>
+          <label>
+              Wireless: <input type="checkbox" id="blankCheckbox" value="option1">
+          </label>
+          <br>
+         <label>
+              USB: <input type="checkbox" id="blankCheckbox" value="option1">
+          </label>
+          <br>
+        <label>
+              DSL: <input type="checkbox" id="blankCheckbox" value="option1">
+          </label>
+          <label>
+              DSL2: <input type="checkbox" id="blankCheckbox" value="option1">
+          </label>
+          <br>
+            <label>
+              Internet: <input type="checkbox" id="blankCheckbox" value="option1">
+          </label>
+
+
+    </div>
+    
+        </blockquote>
     </div>
     <div class="col-md-6">
         
         
     <blockquote>
         <code>
-          <div>BTN:  {{user.btn}}{{user.btn1}}{{user.btn2}}</div>
-          <div>CTN:  {{user.area}}{{user.phone}}{{user.ctn}}</div>
-          <div>Account Name: {{user.name}}</div>
-          <div>Callers Name: {{user.caller}}</div>
-          <div>Email: {{user.email}}</div>
-          <div>Service type: {{user.service}}</div>
-          <div>Modem Model: {{user.model}}</div>
-          <div>CDPI Area of High Demand: {{user.aohd}}</div>
-          <div>DSL Light: {{user.dsl}}</div>
-          <div>Internet Light: {{user.light}}</div>
+              <div>BTN:  {{user.btn}}{{user.btn1}}{{user.btn2}}</div>
+              <div>CTN:  {{user.area}}{{user.phone}}{{user.ctn}}</div>
+              <div>Account Name: {{user.name}}</div>
+              <div>Callers Name: {{user.caller}}</div>
+              <div>Email: {{user.email}}</div>
+              <div>Service type: {{user.service}}</div>
+              <div>Modem Model: {{user.model}}</div>
+              <div>CDPI Area of High Demand: {{user.aohd}}</div>
+              <div>DSL Light: {{user.dsl}}</div>
+              <div>Internet Light: {{user.light}}</div>
           <hr width="100%">
           <p>Procedure Notes:</p>
           
@@ -84,7 +197,7 @@
             <div>Checked RADIUS USAGE in INET:</div> 
             <div>LOOPCARE Disconnects:</div>
             <div>Checked failed RADIUS:</div>
-            <div>Checked lights on modem - No DSL.</div>
+            <div>Checked lights on modem: No DSL.</div>
             <div>Home phone has a dial tone</div>
             <div>Verified filters are in place</div>
             <div>Static on line</div>
