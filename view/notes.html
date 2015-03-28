@@ -1,5 +1,10 @@
 
-<h3>No DSL Sync</h3>
+<div class="alert alert-danger" role="alert">
+    
+    <h5>No DSL Sync</h5>
+    Notes are not saved here! Use the raw text exitor below to manually add or change your notes.
+
+</div>
 <hr width="100%">
 <div ng-controller="notesController" >
     <div class="row">
@@ -59,33 +64,36 @@
         <input type="text" ng-model="user.light" class="form-control input-sm" />
     </div>
     <hr width="100%">
+    
+    
+    
     <!-- This is after the Caller Info -->
     <h4>Procedure Notes:</h4>
     <hr width="100%">
     <div class="form-group">
         <label for="">LOOPCARE VER CODE:</label>
-        <input type="text" ng-model="user.light" class="form-control input-sm" />
+        <input type="text" ng-model="user.lc" class="form-control input-sm" />
     </div>
     
     <div class="form-group">
         <label for="">RADIUS USAGE Disconnects in INET:</label>
-        <input type="text" ng-model="user.light" class="form-control input-sm" />
+        <input type="text" ng-model="user.inetdisco" class="form-control input-sm" />
     </div>
     
     <div class="form-group">
         <label for="">LOOPCARE Disconnects:</label>
-        <input type="text" ng-model="user.light" class="form-control input-sm" />
+        <input type="text" ng-model="user.lcdisco" class="form-control input-sm" />
     </div>
     
     <div class="form-group">
         <label for="">Checked Failed RADIUS Logins:</label>
-        <input type="text" ng-model="user.light" class="form-control input-sm" />
+        <input type="text" ng-model="user.failedradius" class="form-control input-sm" />
     </div>
     
     
     <div class="form-group">
         <label for="">Home phone has Active Dial tone:</label>
-        <select class="form-control input-sm" ng-model="user.aohd">
+        <select class="form-control input-sm" ng-model="user.dialtone">
           <option></option>
           <option>No, there is no dial tone</option>
           <option>Yes, Dial tone is Active</option>
@@ -94,7 +102,7 @@
     
     <div class="form-group">
         <label for="">Verified and Reseated Filters:</label>
-        <select class="form-control input-sm" ng-model="user.aohd">
+        <select class="form-control input-sm" ng-model="user.filters">
           <option>Verified and Reseated Filters, no change.</option>
           <option>Reseated Filters, issue resolved.</option>
           <option>Filters are bad, filter request filled out.</option>
@@ -103,7 +111,7 @@
     
     <div class="form-group">
         <label for="">Any Static on Phone Line:</label>
-       <select class="form-control input-sm" ng-model="user.aohd">
+       <select class="form-control input-sm" ng-model="user.static">
           <option></option>
           <option>Yes, there is static on Phone Line</option>
           <option>No, there is not any static on line</option>
@@ -112,7 +120,7 @@
     
     <div class="form-group">
         <label for="">Reseated Phone Line:</label>
-        <select class="form-control input-sm" ng-model="user.aohd">
+        <select class="form-control input-sm" ng-model="user.reseated">
           <option></option>
           <option>Reseated phone line securly, no change</option>
           <option>Reseated and Issue has been resolved</option>
@@ -121,59 +129,71 @@
     
     <div class="form-group">
         <label for="">Phone Cord Less then 10 Feet:</label>
-        <select class="form-control input-sm" ng-model="user.aohd">
+        <select class="form-control input-sm" ng-model="user.lenght">
           <option></option>
           <option>Phone Cord is less then 10 Feet Long</option>
           <option>Phone Cord is more then 10 Feet Long</option>
         </select>
     </div>
-    
     <div class="form-group">
         <label for="">Lights on Modem 1 Minte after Powercycle:</label>
-        <p></p>
-          <label>
-              Power: <input type="checkbox" id="blankCheckbox" value="option1">
+        
+        <ul>
+            <li>
+          <label class="btn btn-primary">
+              Power: <input type="checkbox" ng-model="user.pwr">
           </label>
-          <br>
-          <label>
-              E1: <input type="checkbox" id="blankCheckbox" value="option1">
-          </label>
-          
-          <label>
-              E2: <input type="checkbox" id="blankCheckbox" value="option1">
-          </label>
-          
-          <label>
-              E3: <input type="checkbox" id="blankCheckbox" value="option1">
+          </li>
+               <p></p>
+          <li>
+          <label class="btn btn-primary">
+              E1: <input type="checkbox" ng-model="user.e1">
           </label>
           
-            <label>
-              E4: <input type="checkbox" id="blankCheckbox" value="option1">
+          <label class="btn btn-primary">
+              E2: <input type="checkbox" ng-model="user.e2">
           </label>
-          <br>
-          <label>
-              Wireless: <input type="checkbox" id="blankCheckbox" value="option1">
+          
+          <label class="btn btn-primary">
+              E3: <input type="checkbox" ng-model="user.e3">
           </label>
-          <br>
-         <label>
-              USB: <input type="checkbox" id="blankCheckbox" value="option1">
+          
+            <label class="btn btn-primary">
+              E4: <input type="checkbox" ng-model="user.e4">
           </label>
-          <br>
-        <label>
-              DSL: <input type="checkbox" id="blankCheckbox" value="option1">
+     </li>
+     <p></p>
+     <li>
+          <label class="btn btn-primary">
+              Wireless: <input type="checkbox" ng-model="user.wireless">
           </label>
-          <label>
-              DSL2: <input type="checkbox" id="blankCheckbox" value="option1">
+         <label class="btn btn-primary">
+              USB: <input type="checkbox" ng-model="user.usb">
           </label>
-          <br>
-            <label>
-              Internet: <input type="checkbox" id="blankCheckbox" value="option1">
+         </li>
+              <p></p>
+         <li>
+        <label class="btn btn-primary">
+              DSL: <input type="checkbox" ng-model="user.dsl">
           </label>
-
+          <label class="btn btn-primary">
+              DSL2: <input type="checkbox" ng-model="user.dsl2">
+          </label>
+          </li>
+               <p></p>
+          <li>
+            <label class="btn btn-primary">
+              Internet: <input type="checkbox" ng-model="user.internetlight"  ngTrueValue="user.internetlight">
+          </label>
+          </li>
+          </ul>
+          </p>
 
     </div>
     
         </blockquote>
+
+        
     </div>
     <div class="col-md-6">
         
@@ -193,20 +213,49 @@
           <hr width="100%">
           <p>Procedure Notes:</p>
           
-            <div>Ver Code LOOPCARE:</div>
-            <div>Checked RADIUS USAGE in INET:</div> 
-            <div>LOOPCARE Disconnects:</div>
-            <div>Checked failed RADIUS:</div>
+            <div>Ver Code LOOPCARE: {{user.lc}}</div>
+            <div>Checked RADIUS USAGE in INET: {{user.inetdisco}}</div> 
+            <div>LOOPCARE Disconnects: {{user.lcdisco}}</div>
+            <div>Checked failed RADIUS: {{user.failedradius}}</div>
             <div>Checked lights on modem: No DSL.</div>
-            <div>Home phone has a dial tone</div>
-            <div>Verified filters are in place</div>
-            <div>Static on line</div>
-            <div>Reseat Phone Line</div>
-            <div>Phone cord is less than 10 feet long</div>
+            <div>Home phone has a dial tone: {{user.dialtone}}</div>
+            <div>Verified filters are in place: {{user.filters}}</div>
+            <div>Static on line: {{user.static}}</div>
+            <div>Reseat Phone Line: {{user.reseated}}</div>
+            <div>Phone cord is less than 10 feet long: {{user.lenght}}</div>
             <div>Powercycled modem</div>
-            <div>Lights on modem 1 minute after powercycle</div>
+            <div>Lights on modem 1 minute after powercycle: 
+            {{user.pwr}}{{user.e1}}{{user.e2}}{{user.e3}}{{user.e4}}{{user.wireless}}{{user.usb}}{{user.dsl}}{{user.dsl2}}{{user.internetlight}}</div>
 
         </code>
+        <h3>Raw Text<small>Manually edit Text here:</small></h3>
+<textarea class="form-control" rows="15">
+BTN:  {{user.btn}}{{user.btn1}}{{user.btn2}}
+CTN:  {{user.area}}{{user.phone}}{{user.ctn}}
+Account Name: {{user.name}}
+Callers Name: {{user.caller}}
+Email: {{user.email}}
+Service type: {{user.service}}
+Modem Model: {{user.model}}
+CDPI Area of High Demand: {{user.aohd}}
+DSL Light: {{user.dsl}}
+Internet Light: {{user.light}}
+          
+Procedure Notes:
+          
+Ver Code LOOPCARE: {{user.lc}}
+Checked RADIUS USAGE in INET: {{user.inetdisco}}
+LOOPCARE Disconnects: {{user.lcdisco}}
+Checked failed RADIUS: {{user.failedradius}}
+Checked lights on modem: No DSL.
+Home phone has a dial tone: {{user.dialtone}}
+Verified filters are in place: {{user.filters}}
+Static on line: {{user.static}}
+Reseat Phone Line: {{user.reseated}}
+Phone cord is less than 10 feet long: {{user.lenght}}
+Powercycled modem
+Lights on modem 1 minute after powercycle: {{user.pwr}}{{user.e1}}{{user.e2}}{{user.e3}}{{user.e4}}{{user.wireless}}{{user.usb}}{{user.dsl}}{{user.dsl2}}{{user.internetlight}}
+</textarea>
     </blockquote>
         
     </div>

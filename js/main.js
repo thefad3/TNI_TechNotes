@@ -24,6 +24,10 @@ angular.module('note', ['ngRoute'])
 
 .controller("notesController", function($scope){
         $scope.name = {};
-    
+        
+        $('#myAlert').on('closed.bs.alert', function () {
+          // do something…
+        })
+
 })
 
