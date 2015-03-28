@@ -10,14 +10,16 @@
 
 </head>
 <body ng-app="note">
-<div class="container">
-    <div class="row">
-      <ul class="nav nav-pills">
+  <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <ul class="nav nav-pills">
           <li role="presentation" class="active"><a href="#">Home</a></li>
           <li role="presentation"><a href="#/notes">No DSL Sync</a></li>
     </ul>
-    </div>
-    <p></p>
+  </div>
+</nav>
+  
+<div class="container ngView">
     <div class="row">
             <div ng-view></div>
         </div>

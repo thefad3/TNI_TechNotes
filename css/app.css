@@ -20,7 +20,12 @@ code p {
   margin: 0px; }
 
 .notesFrame {
-  overflow: scroll;
-  height: auto; }
+  overflow: scroll; }
+
+.ngView {
+  padding-top: 60px; }
+
+.nav-pills {
+  padding-top: 4px; }
 
 /*# sourceMappingURL=app.css.map */
