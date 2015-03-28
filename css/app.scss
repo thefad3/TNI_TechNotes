@@ -1,10 +1,25 @@
 body {
-    background-color: #000;
-    color: #fff;
+    background-color: #F0FFFF;
+    color: #121212;
 }
 ul{
     list-style: none;
     li{
     display: inline-block;
+    }
+}
+.phone {
+    width: 25%;
+}
+.contactNumber{
+    display: inline-block;
+    input{
+        display: inline;
+    }
+}
+code{
+    p{
+        padding: 0px;
+        margin: 0px;
     }
 }

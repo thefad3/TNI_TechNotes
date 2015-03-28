@@ -1,0 +1,87 @@
+
+<h3>No DSL Sync</h3>
+
+<div ng-controller="notesController">
+    <div class="row">
+        <div class="col-md-6">
+    <div class="form-group contactNumber">
+        <label for="">Billing Telephone Number (BTN):</label><br>
+        <input type="number" maxlength="3" class="form-control phone" ng-model="user.btn"  />
+        <input type="number" maxlength="3" class="form-control phone" ng-model="user.btn1"  />
+        <input type="number" maxlength="4" class="form-control phone" ng-model="user.btn2"  />
+    </div>
+    <div class="form-group contactNumber">
+        <label for="">Comtact Number (CTN):</label><br>
+        <input type="number" maxlength="3" class="form-control phone" ng-model="user.area"  />
+        <input type="number" maxlength="3" class="form-control phone" ng-model="user.phone"  />
+        <input type="number" maxlength="4" class="form-control phone" ng-model="user.ctn"  />
+    </div>
+    <div class="form-group">
+        <label for="">Account Name:</label>
+        <input type="text" ng-model="user.name" class="form-control input-sm" />
+    </div>
+        <div class="form-group">
+        <label for="">Callers Name:</label>
+        <input type="text" ng-model="user.caller" class="form-control input-sm" />
+    </div>
+        <div class="form-group">
+        <label for="">Email:</label>
+        <input type="text" ng-model="user.email" class="form-control input-sm" />
+    </div>
+        <div class="form-group">
+        <label for="">Service Type:</label>
+        <select class="form-control input-sm" ng-model="user.service">
+          <option>DSL</option>
+          <option>BDSL</option>
+          <option>Frontier Broadband/TV/Phone</option>
+          <option>Dish/Hughes Satellite</option>
+          <option>Fios</option>
+        </select>
+    </div>
+        <div class="form-group">
+        <label for="">Modem Model:</label>
+        <input type="text" ng-model="user.model" class="form-control input-sm" />
+    </div>
+    <div class="form-group">
+    <label for="">CDPI AoHD (Area of High Demand):</label>
+        <select class="form-control input-sm" ng-model="user.aohd">
+          <option>No</option>
+          <option>Yes</option>
+         </select>
+    </div>
+        <div class="form-group">
+        <label for="">DSL Light:</label>
+        <input type="text" ng-model="user.dsl" class="form-control input-sm" />
+    </div>
+        <div class="form-group">
+        <label for="">Internet Light:</label>
+        <input type="text" ng-model="user.light" class="form-control input-sm" />
+    </div>
+    
+    
+    
+    
+    </div>
+    <div class="col-md-6">
+        
+        
+    <blockquote>
+        <code>
+          <div>BTN:  {{user.btn}}{{user.btn1}}{{user.btn2}}</div>
+          <div>CTN:  {{user.area}}{{user.phone}}{{user.ctn}}</div>
+          <div>Account Name: {{user.name}}</div>
+          <div>Callers Name: {{user.caller}}</div>
+          <div>Email: {{user.email}}</div>
+          <div>Service type: {{user.service}}</div>
+          <div>Modem Model: {{user.model}}</div>
+          <div>CDPI Area of High Demand: {{user.aohd}}</div>
+          <div>DSL Light: {{user.dsl}}</div>
+          <div>Internet Light: {{user.light}}</div>
+          <hr width="100%">
+          <p>Procedure Notes:</p>
+        </code>
+    </blockquote>
+        
+    </div>
+ </div>
+</div>

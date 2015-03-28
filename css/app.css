@@ -1,11 +1,18 @@
 body {
-  background-color: #000;
-  color: #fff; }
+  background-color: #F0FFFF;
+  color: #121212; }
 
 ul {
   list-style: none; }
+  ul li {
+    display: inline-block; }
 
-li {
+.phone {
+  width: 25%; }
+
+.contactNumber {
   display: inline-block; }
+  .contactNumber input {
+    display: inline; }
 
 /*# sourceMappingURL=app.css.map */

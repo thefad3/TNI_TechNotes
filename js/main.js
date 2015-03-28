@@ -1,15 +1,29 @@
-angular.module('myApp', ['ngRoute'])
+angular.module('note', ['ngRoute'])
     .config(function ($routeProvider) {
         $routeProvider
             .when("/", {
-                templateUrl: "templates/home.html",
+                templateUrl: "view/home.html",
                 controller: "homeController"
             })
             .when("/notes", {
-                templateUrl: "templates/notes.html",
+                templateUrl: "view/notes.html",
                 controller: "notesController"
             })
             .otherwise({
-                 redirectTo: '/'
+                redirectTo: "/"
             });
-});
+})
+
+
+
+
+.controller("homeController", function($scope){
+        $scope.goat = 'test';
+    
+})
+
+.controller("notesController", function($scope){
+        $scope.name = {};
+    
+})
+
